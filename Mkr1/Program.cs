@@ -3,6 +3,7 @@ using Mkr1.Command;
 using Mkr1.State.States;
 using Mkr1.State;
 using Mkr1.TemplateMethod;
+using Mkr1.Visitor;
 
 var div = new LightElementNode("div", "block", false);
 div.CssClasses.Add("container");
@@ -87,3 +88,16 @@ var items = new List<string> { "Apple", "Banana", "Cherry" };
 var renderer = new SimpleListRenderer();
 string renderedList = renderer.RenderList(items);
 Console.WriteLine(renderedList);
+
+Console.WriteLine("\n=== Visitor ===");
+
+var visRoot = new LightElementNode("div");
+visRoot.AddChild(new LightTextNode("Hello"));
+var span = new LightElementNode("span");
+span.AddChild(new LightTextNode(" world!"));
+visRoot.AddChild(span);
+
+var visitor = new CharacterCountVisitor();
+visRoot.Accept(visitor);
+
+Console.WriteLine($"Total characters: {visitor.TotalCharacters}");

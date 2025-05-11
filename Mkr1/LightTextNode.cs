@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mkr1.Visitor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mkr1
 {
-    internal class LightTextNode : LightNode
+    public class LightTextNode : LightNode, IVisitable
     {
         public string Text { get; set; }
 
@@ -24,5 +25,6 @@ namespace Mkr1
         {
             return Text;
         }
+        public void Accept(IVisitor visitor) => visitor.Visit(this);
     }
 }
