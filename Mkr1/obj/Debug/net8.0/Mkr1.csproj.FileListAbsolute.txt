@@ -1,0 +1,15 @@
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\bin\Debug\net8.0\Mkr1.exe
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\bin\Debug\net8.0\Mkr1.deps.json
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\bin\Debug\net8.0\Mkr1.runtimeconfig.json
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\bin\Debug\net8.0\Mkr1.dll
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\bin\Debug\net8.0\Mkr1.pdb
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.AssemblyInfoInputs.cache
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.AssemblyInfo.cs
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.csproj.CoreCompileInputs.cache
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.sourcelink.json
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.dll
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\refint\Mkr1.dll
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.pdb
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\Mkr1.genruntimeconfig.cache
+D:\Уроки\Конструювання програмного забезпечення\Mkr1\Mkr1\obj\Debug\net8.0\ref\Mkr1.dll
