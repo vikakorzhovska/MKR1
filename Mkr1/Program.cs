@@ -2,6 +2,7 @@
 using Mkr1.Command;
 using Mkr1.State.States;
 using Mkr1.State;
+using Mkr1.TemplateMethod;
 
 var div = new LightElementNode("div", "block", false);
 div.CssClasses.Add("container");
@@ -79,3 +80,10 @@ Console.WriteLine(string.Join(" ", input.CssClasses));
 validator.SetState(new ValidState());
 validator.Apply(input);
 Console.WriteLine(string.Join(" ", input.CssClasses));
+
+Console.WriteLine("\n=== Template Method ===");
+
+var items = new List<string> { "Apple", "Banana", "Cherry" };
+var renderer = new SimpleListRenderer();
+string renderedList = renderer.RenderList(items);
+Console.WriteLine(renderedList);

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mkr1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9671c81f5e9b78e5be60fa2a5c383ea260abf12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+810ca6b14972c6863b88648e35a55965f6cdea9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mkr1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mkr1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
