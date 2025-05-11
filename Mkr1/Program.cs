@@ -1,4 +1,5 @@
 ﻿using Mkr1;
+using Mkr1.Command;
 
 var div = new LightElementNode("div", "block", false);
 div.CssClasses.Add("container");
@@ -46,4 +47,18 @@ var iterator = errorTestDiv.GetIterator("error");
 while (iterator.MoveNext())
 {
     Console.WriteLine($"Found: <{iterator.Current.TagName} class=\"{string.Join(" ", iterator.Current.CssClasses)}\">");
+}
+
+Console.WriteLine("\n=== Command===");
+
+var paragraph = new LightElementNode("p");
+paragraph.AddChild(new LightTextNode("Hello, "));
+paragraph.AddChild(new LightTextNode("world!"));
+
+var command = new UpperCaseTextCommand(paragraph);
+command.Execute();
+
+foreach (var child in paragraph.Children.OfType<LightTextNode>())
+{
+    Console.WriteLine(child.Text);
 }
