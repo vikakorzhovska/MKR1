@@ -23,3 +23,27 @@ div.AddChild(h1);
 div.AddChild(ul);
 
 Console.WriteLine(div.OuterHTML());
+
+Console.WriteLine("\n===Iterator===");
+
+var errorTestDiv = new LightElementNode("div");
+errorTestDiv.CssClasses.Add("container");
+
+var errLi1 = new LightElementNode("li");
+errLi1.CssClasses.Add("error");
+
+var okLi = new LightElementNode("li");
+okLi.CssClasses.Add("ok");
+
+var errLi2 = new LightElementNode("li");
+errLi2.CssClasses.Add("error");
+
+errorTestDiv.AddChild(errLi1);
+errorTestDiv.AddChild(okLi);
+errorTestDiv.AddChild(errLi2);
+
+var iterator = errorTestDiv.GetIterator("error");
+while (iterator.MoveNext())
+{
+    Console.WriteLine($"Found: <{iterator.Current.TagName} class=\"{string.Join(" ", iterator.Current.CssClasses)}\">");
+}

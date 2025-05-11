@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mkr1.Iterator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mkr1
 {
-    internal class LightElementNode : LightNode
+    public class LightElementNode : LightNode, ILightNodeAggregate
     {
         public string TagName { get; set; }
         public string DisplayType { get; set; }
@@ -59,6 +60,14 @@ namespace Mkr1
             }
 
             return innerHtml;
+        }
+        public ILightNodeIterator GetIterator(string className)
+        {
+            return new ClassFilteredIterator(this, className);
+        }
+        public LightElementNode(string tagName)
+    : this(tagName, "block", false) 
+        {
         }
     }
 }
