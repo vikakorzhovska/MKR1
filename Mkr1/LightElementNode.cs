@@ -1,4 +1,5 @@
 ﻿using Mkr1.Iterator;
+using Mkr1.Visitor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Mkr1
 {
-    public class LightElementNode : LightNode, ILightNodeAggregate
+    public class LightElementNode : LightNode, ILightNodeAggregate, IVisitable
     {
         public string TagName { get; set; }
         public string DisplayType { get; set; }
@@ -68,6 +69,15 @@ namespace Mkr1
         public LightElementNode(string tagName)
     : this(tagName, "block", false) 
         {
+        }
+        public void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+            foreach (var child in Children)
+            {
+                if (child is IVisitable visitable)
+                    visitable.Accept(visitor);
+            }
         }
     }
 }
