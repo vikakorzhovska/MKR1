@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mkr1", "Mkr1\Mkr1.csproj", "{37E045A2-B249-4C68-A118-74796231C9AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37E045A2-B249-4C68-A118-74796231C9AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E045A2-B249-4C68-A118-74796231C9AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E045A2-B249-4C68-A118-74796231C9AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E045A2-B249-4C68-A118-74796231C9AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8164C5F4-33A8-461F-8A2C-59C06CE1785B}
+	EndGlobalSection
+EndGlobal
