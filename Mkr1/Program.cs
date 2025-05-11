@@ -1,5 +1,7 @@
 ﻿using Mkr1;
 using Mkr1.Command;
+using Mkr1.State.States;
+using Mkr1.State;
 
 var div = new LightElementNode("div", "block", false);
 div.CssClasses.Add("container");
@@ -25,7 +27,7 @@ div.AddChild(ul);
 
 Console.WriteLine(div.OuterHTML());
 
-Console.WriteLine("\n===Iterator===");
+Console.WriteLine("\n=== Iterator ===");
 
 var errorTestDiv = new LightElementNode("div");
 errorTestDiv.CssClasses.Add("container");
@@ -49,7 +51,7 @@ while (iterator.MoveNext())
     Console.WriteLine($"Found: <{iterator.Current.TagName} class=\"{string.Join(" ", iterator.Current.CssClasses)}\">");
 }
 
-Console.WriteLine("\n=== Command===");
+Console.WriteLine("\n=== Command ===");
 
 var paragraph = new LightElementNode("p");
 paragraph.AddChild(new LightTextNode("Hello, "));
@@ -62,3 +64,18 @@ foreach (var child in paragraph.Children.OfType<LightTextNode>())
 {
     Console.WriteLine(child.Text);
 }
+
+Console.WriteLine("\n=== State ===");
+
+var input = new LightElementNode("input");
+input.CssClasses.Add("form-control");
+
+var validator = new ValidationContext(new UncheckedState());
+
+validator.SetState(new InvalidState());
+validator.Apply(input);
+Console.WriteLine(string.Join(" ", input.CssClasses));
+
+validator.SetState(new ValidState());
+validator.Apply(input);
+Console.WriteLine(string.Join(" ", input.CssClasses));
